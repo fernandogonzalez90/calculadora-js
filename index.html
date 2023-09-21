@@ -1,44 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calculadora con JS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-    <h1>Calculadora con JavaScript</h1>
-    <h2>Por Fernando Gonzalez</h2>
-    <div class="calculadora">
-        <input type="text" id="pantalla" readonly>
-        <br>
-        <input type="button" value="1" onclick="agregar('1')">
-        <input type="button" value="2" onclick="agregar('2')">
-        <input type="button" value="3" onclick="agregar('3')">
-        <input type="button" value="+" onclick="agregar('+')" id="operador">
-        <br>
-        <input type="button" value="4" onclick="agregar('4')">
-        <input type="button" value="5" onclick="agregar('5')">
-        <input type="button" value="6" onclick="agregar('6')">
-        <input type="button" value="-" onclick="agregar('-')" id="operador">
-        <br>
-        <input type="button" value="7" onclick="agregar('7')">
-        <input type="button" value="8" onclick="agregar('8')">
-        <input type="button" value="9" onclick="agregar('9')">
-        <input type="button" value="*" onclick="agregar('*')" id="operador">
-        <br>
-        <input type="button" value="0" onclick="agregar('0')">
-        <input type="button" value="." onclick="agregar('.')">
-        <input type="button" value="/" onclick="agregar('/')" id="operador">
-        <input type="button" value="=" onclick="calcular()" id="operador">
-        <br>
-        <input type="button" value="C" onclick="borrar()" id="c">
+  <body class="bg-light" id="body">
+    <div class="row d-flex justify-content-center" >
+      <div class="col-lg-6 col-sm-10 col-12">
+        <div class="card  shadow m-5">
+          <div class="card-header text-center text-secondary">Calculadora con JavaScript</div>
+          <div class="card-body">
+            <div class="mb-12">
+              <input type="text" class="form-control py-2 mt-3" id="pantalla" readonly />
+            </div>
+            <div class="container mt-2">
+              <div class="row d-flex justify-content-between">
+                <!-- NUMEROS -->
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1  btn-lg boton-100"
+                    type="button"
+                    value="1"
+                    onclick="agregar('1')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="2"
+                    onclick="agregar('2')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="3"
+                    onclick="agregar('3')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="+"
+                    onclick="agregar('+')"
+                    id="operador"
+                  />
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="4"
+                    onclick="agregar('4')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="5"
+                    onclick="agregar('5')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="6"
+                    onclick="agregar('6')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="-"
+                    onclick="agregar('-')"
+                    id="operador"
+                  />
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="7"
+                    onclick="agregar('7')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="8"
+                    onclick="agregar('8')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="9"
+                    onclick="agregar('9')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="*"
+                    onclick="agregar('*')"
+                    id="operador"
+                  />
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="0"
+                    onclick="agregar('0')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="."
+                    onclick="agregar('.')"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="/"
+                    onclick="agregar('/')"
+                    id="operador"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="="
+                    onclick="calcular()"
+                    id="operador"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <input
+                    class="btn btn-secondary my-1 btn-lg boton-100"
+                    type="button"
+                    value="C"
+                    onclick="borrar()"
+                    id="c"
+                  />
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card-footer text-center text-secondary">By Fernando Gonzalez</div>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
